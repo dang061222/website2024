@@ -1,0 +1,20 @@
+<?php 
+  $content = Helper::input_value('c'); 
+  if(!empty($content)) 
+  { 
+     switch($content) 
+     { 
+         case "addcat": 
+            include_once("view/category/add.php"); 
+            break; 
+         case "editcat": 
+            include_once("view/category/edit.php"); 
+            break; 
+         case "deletecat": 
+            include_once("view/category/delete.php"); 
+            break;         
+     } 
+  } 
+  else 
+      include_once("admin/view/category/list.php");
+?> 
